@@ -1,13 +1,4 @@
-// Assignment code here
-//prompts for password criteria
-//user chooses criteria
-//criteria to choose from lenght(8-128), lowercase, uppercase, numbric, special charaters
-//validate users answer
-//password generated that meets users criteria
-//password is either displayed or in an alert window
-
-
-var charaterLength = 8;
+var charaterLength = [];
 var choiceArr =[];
 
   var lowercase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
@@ -44,7 +35,7 @@ function generatepassword(){
 
 function getPrompts() {
   choiceArr = [];
-  charaterLength = pasrseInt(prompt('How many charaters do you want your password to be? (8-128)'));
+  charaterLength = parseInt(prompt('How many charaters do you want your password to be? (8-128)'));
  
   if(isNaN(charaterLength)|| charaterLength < 8 ||charaterLength > 128){
     alert("passwords has have between 8 and 128 charaters. please try again.");
